@@ -4,8 +4,5 @@
 layout: default
 title: Home page
 ---
-
-
-
 # Heading 1
 ## Heading 2
