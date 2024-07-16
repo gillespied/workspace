@@ -1,0 +1,24 @@
+{
+	"name": "Jekyll Development Environment",
+	"image": "mcr.microsoft.com/vscode/devcontainers/ruby:0-3.1-bullseye",
+	"features": {
+	  "ghcr.io/devcontainers/features/common-utils:2.4.4": {},
+	  "ghcr.io/devcontainers/features/git:1": {}
+	},
+	"forwardPorts": [4000],
+	"workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
+	"mounts": [
+	  "source=${env:HOME}/.gitconfig,target=/home/vscode/.gitconfig,type=bind,consistency=cached"
+	],
+	"workspaceFolder": "/workspace",
+	"postCreateCommand": "gem install jekyll bundler && bundle install && bundle exec jekyll new . --force && bundle install && bundle exec jekyll serve --host 0.0.0.0",
+	"postStartCommand": "if [ -f Gemfile ]; then bundle install && bundle exec jekyll serve --host 0.0.0.0; else echo 'No Gemfile found'; fi",
+	"customizations": {
+	  "vscode": {
+		"extensions": [
+		  "rebornix.Ruby"
+		]
+	  }
+	}
+  }
+  
