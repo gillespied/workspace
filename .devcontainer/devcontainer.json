@@ -11,8 +11,8 @@
 	  "source=${env:HOME}/.gitconfig,target=/home/vscode/.gitconfig,type=bind,consistency=cached"
 	],
 	"workspaceFolder": "/workspace",
-	"postCreateCommand": "gem install jekyll bundler && bundle install && bundle exec jekyll new . --force && bundle install && bundle exec jekyll serve --host 0.0.0.0",
-	"postStartCommand": "if [ -f Gemfile ]; then bundle install && bundle exec jekyll serve --host 0.0.0.0; else echo 'No Gemfile found'; fi",
+	"postCreateCommand": "/workspace/onCreate.sh",
+	"postStartCommand": "if [ -f Gemfile ]; then bundle install && bundle exec jekyll serve --host 0.0.0.0; else echo 'No Gemfile found'; fi", 
 	"customizations": {
 	  "vscode": {
 		"extensions": [
