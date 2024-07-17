@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>GitHub OAuth PKCE Receiver</title>
+</head>
+<body>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const code = params.get('code');
+    const state = params.get('state');
+    if (window.opener) {
+      window.opener.postMessage(
+        `authorization:github:${state}:${code}`,
+        window.location.origin
+      );
+      window.close();
+    }
+  </script>
+</body>
+</html>

@@ -2,6 +2,9 @@ backend:
   name: github
   repo: gillespied/govuk-jekyll-template
   branch: add-decap-cms
+  base_url: https://gillespied.github.io/govuk-jekyll-template
+  auth_endpoint: oauth/authorize
+  auth_type: pkce
 
 media_folder: "assets/uploads"
 public_folder: "/assets/uploads"
