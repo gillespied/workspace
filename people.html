@@ -1,0 +1,17 @@
+---
+layout: default
+title: People
+permalink: "/people"
+---
+
+<div>
+  {% for person in site.people %}
+    <div class="people-collection">
+      <h2>{{ person.name }}</h2>
+      <p>{{ person.role }}</p>
+      {% if person.images %}
+        <img class="person-image" src="{{site.baseurl}}{{ person.images }}" alt="{{ person.name }}">
+      {% endif %}
+    </div>
+  {% endfor %}
+</div>

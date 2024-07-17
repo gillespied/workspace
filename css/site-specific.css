@@ -1,0 +1,32 @@
+.people-collection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 2em;
+}
+
+.person {
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 1em;
+    padding: 1em;
+    width: 300px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.person img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.person-image {
+    max-width: 150px;
+    /* Adjust the max-width to scale the image */
+    height: auto;
+    /* Maintain aspect ratio */
+    border-radius: 5px;
+    /* Apply the same border radius for consistency */
+}
