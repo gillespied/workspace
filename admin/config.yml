@@ -1,8 +1,10 @@
 backend:
-  name: test-repo
-
-media_folder: "assets/uploads" # Folder where user uploaded files should go
-public_folder: "/assets/uploads" # Folder that gets served up to the user
+  name: github
+  repo: gillespied/govuk-jekyll-template
+  branch: add-decap-cms
+  auth_type: pkce
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
 
 collections:
   - name: "people"
@@ -12,5 +14,5 @@ collections:
     slug: "{{slug}}"
     fields:
       - {label: "Name", name: "name", widget: "string"}
-      - {label: "Role", name: "role", widget: "text"}
-      - {label: "Images", name: "images", widget: "image"}
+      - {label: "Role", name: "role", widget: "widget"}
+      - {label: "Image", name: "image", widget: "image"}

@@ -28,6 +28,13 @@ baseurl: "/govuk-jekyll-template" # the subpath of your site, e.g. /blog
 url: "https://gillespied.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 
+defaults:
+  - scope:
+      path: ""
+      type: "people"
+    values:
+      layout: "person"
+
 collections:
   people:
     output: true
@@ -56,3 +63,5 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+include: 
+  - admin
